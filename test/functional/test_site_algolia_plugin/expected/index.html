@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.17.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello World</title>
+  <link rel="stylesheet" href="markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="markbind/css/octicons.css">
+  <link rel="stylesheet" href="markbind/css/codeblock-dark.min.css">
+  <link rel="stylesheet" href="markbind/css/markbind.min.css">
+  <script src="markbind/js/polyfill.min.js"></script>
+  <script src="markbind/js/vue.min.js"></script>
+  <script src="markbind/js/markbind.min.js"></script>
+  <script src="markbind/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <link rel="stylesheet" href="/test_site_algolia_plugin/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+</head>
+
+<body>
+  <div id="app">
+    <p>
+    <p><strong>Test Algolia plugin adds algolia-no-index classes</strong></p>
+    <p><strong>Dropdowns should have algolia-no-index class</strong></p>
+    <div class="temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <div class="temp-dropdown temp-dropdown-placeholder"></div>
+    <dropdown class="temp-dropdown algolia-no-index"><template slot="_header">Dropdown</template>
+      <li><a class="dropdown-item" href="/">One</a></li>
+      <li><a class="dropdown-item" href="/">Two</a></li>
+    </dropdown>
+    <p><strong>Modal content should have algolia-no-index class</strong></p>
+    <modal header="Modal" id="modal:trigger_id">
+      Content should have `algolia-no-index` class
+    </modal>
+    <trigger for="modal:trigger_id">Trigger should not have `algolia-no-index` class</trigger>
+    <p><strong>Panels that are not expanded should have algolia-no-index class</strong></p>
+    <panel header="Panel" class="algolia-no-index">
+      Content
+    </panel>
+    <panel header="Panel" expanded>
+      Content
+    </panel>
+    <p><strong>Popover content should have algolia-no-index class</strong></p>
+    <popover effect="fade" header="Title" placement="top">
+      <div slot="content" class="algolia-no-index">Content should have `algolia-no-index` class</div>
+      <button class="btn btn-secondary">Trigger should not have `algolia-no-index` class</button>
+    </popover>
+    <popover effect="fade" header="Title" content="Content as attribute does not require `algolia-no-index` class" placement="top">
+      <button class="btn btn-secondary">Trigger should not have `algolia-no-index` class</button></popover>
+    <p><strong>Question hint and answer should have algolia-no-index class</strong></p>
+    <question>
+      Question should not have `algolia-no-index` class
+      <div slot="hint" class="algolia-no-index">Hint should have `algolia-no-index` class</div>
+      <div slot="answer" class="algolia-no-index">Answer should have `algolia-no-index` class</div>
+    </question>
+    <p><strong>Tabs except first tab should have algolia-no-index class</strong></p>
+    <tabs>
+      <tab header="First Tab">
+        Content<br>Content<br>Content<br>Content
+      </tab>
+      <tab header="Second Tab" class="algolia-no-index">
+        Content<br>Content<br>Content<br>Content
+      </tab>
+    </tabs>
+    <tabs>
+      <tab-group header="First Group">
+        <tab header="First Tab">
+          Content<br>Content<br>Content<br>Content
+        </tab>
+        <tab header="Second Tab" class="algolia-no-index">
+          Content<br>Content<br>Content<br>Content
+        </tab>
+      </tab-group>
+      <tab-group header="Second Group" class="algolia-no-index">
+        <tab header="First Tab">
+          Content<br>Content<br>Content<br>Content
+        </tab>
+        <tab header="Second Tab" class="algolia-no-index">
+          Content<br>Content<br>Content<br>Content
+        </tab>
+      </tab-group>
+    </tabs>
+    <tabs>
+      <tab-group header="Outer One">
+        <tab header="First Tab">
+          Content<br>Content<br>Content<br>Content
+        </tab>
+        <tab header="Second Tab" class="algolia-no-index">
+          Content<br>Content<br>Content<br>Content
+        </tab>
+      </tab-group>
+      <tab header="Outer Two" class="algolia-no-index">
+        Content<br>Content<br>Content<br>Content
+      </tab>
+    </tabs>
+    <i class="fa fa-arrow-circle-up fa-lg d-print-none" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
+  </div>
+</body>
+<script src="markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/test_site_algolia_plugin'
+  MarkBind.setupWithSearch()
+</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "25626fae796133dc1e734c6bcaaeac3c",
+      indexName: "docsearch",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {},
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
+
+</html>

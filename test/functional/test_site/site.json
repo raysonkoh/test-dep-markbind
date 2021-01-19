@@ -1,0 +1,123 @@
+{
+  "baseUrl": "/test_site",
+  "faviconPath": "favicon.png",
+  "titlePrefix": "",
+  "pages": [
+    {
+      "src": "index.md",
+      "title": "Hello World",
+      "frontmatter": {
+        "frontMatterOverrideProperty": "Overridden by front matter override",
+        "globalAndFrontMatterOverrideProperty":  "Overridden by front matter override"
+      }
+    },
+    {
+      "src": ["testEmptyFrontmatter.md", "testLayoutsOverride.md"],
+      "title": "Hello World",
+      "layout": "testLayout.md"
+    },
+    {
+      "src": "testExternalScripts.md",
+      "title": "Hello World",
+      "layout": "testLayout.md",
+      "externalScripts": [
+        "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+      ]
+    },
+    {
+      "src": "testLayouts.md",
+      "title": "Test nunjucks path resolving"
+    },
+    {
+      "src": [
+        "testNunjucksPathResolving.md",
+        "sub_site/testNunjucksPathResolving.md",
+        "sub_site/nested_sub_site/testNunjucksPathResolving.md"
+      ],
+      "title": "Hello World"
+    },
+    {
+      "glob": ["**/index.md", "**/test_md_fragment.md"]
+    },
+    {
+      "src": "testAntiFOUCStyles.md",
+      "title": "Hello World"
+    },
+    {
+      "src": "testAnchorGeneration.md",
+      "title": "Anchor Generation Test"
+    },
+    {
+      "src": "testTooltipSpacing.mbd",
+      "title": "Tooltip Spacing Test"
+    },
+    {
+      "src": "testThumbnails.md",
+      "title": "Thumbnails Test"
+    },
+    {
+      "src": "testPlantUML.md",
+      "title": "PlantUML Test"
+    },
+    {
+      "src": "testCodeBlocks.md",
+      "title": "Test: Code Blocks"
+    },
+    {
+      "src": "testIncludePluginsRendered.md",
+      "title": "Included files should have plugins rendered on them"
+    },
+    {
+      "src": "testIncludeMultipleModals.md",
+      "title": "Multiple inclusions of a modal should be supported"
+    },
+    {
+      "src": "testPopoverTrigger.md",
+      "title": "Popover initiated by trigger should honor trigger attribute"
+    },
+    {
+      "src": "testDates.md",
+      "title": "Nunjucks date filter tests"
+    },
+    {
+      "src": "testVariableContainsInclude.md",
+      "title": "Variable should be able to store included content fragments"
+    }
+  ],
+  "ignore": [
+    "_markbind/layouts/*",
+    "_markbind/logs/*",
+    "_site/*",
+    "site.json",
+    "*.md",
+    "test.bat",
+    "test.sh",
+    "testUtil/*",
+    "expected/*"
+  ],
+  "deploy": {
+    "message": "Site Update."
+  },
+  "globalOverride": {
+    "globalOverrideProperty": "Overridden by global override",
+    "globalAndFrontMatterOverrideProperty": "Overridden by global override"
+  },
+  "headingIndexingLevel": 4,
+  "plugins": [
+    "testMarkbindPlugin",
+    "filterTags",
+    "googleAnalytics"
+  ],
+  "pluginsContext": {
+    "testMarkbindPlugin": {
+      "pre": "\n\n# Markbind Plugin Pre-render",
+      "post": "<p>Node Modules Plugin Post-render</p>"
+    },
+    "filterTags": {
+      "tags": ["tag-site-shown", "+tag-site-override-shown", "+tag-site-override-specific-shown"]
+    },
+    "googleAnalytics": {
+      "trackingID": "TRACKING-ID"
+    }
+  }
+}

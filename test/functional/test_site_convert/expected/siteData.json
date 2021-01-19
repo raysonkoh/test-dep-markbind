@@ -1,0 +1,71 @@
+{
+  "enableSearch": true,
+  "pages": [
+    {
+      "src": "Home.md",
+      "title": "",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "Page-1.md",
+      "title": "",
+      "headings": {
+        "page-1": "Page 1"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "_Footer.md",
+      "title": "",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "_Sidebar.md",
+      "title": "",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "about.md",
+      "title": "",
+      "headings": {
+        "about": "About"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "contents/topic1.md",
+      "title": "",
+      "headings": {
+        "topic-1": "Topic 1"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "contents/topic2.md",
+      "title": "",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "contents/topic3a.md",
+      "title": "",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "contents/topic3b.md",
+      "title": "",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "index.md",
+      "title": "Landing Page",
+      "headings": {},
+      "headingKeywords": {}
+    }
+  ]
+}
